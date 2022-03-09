@@ -1,0 +1,86 @@
+.nav {
+  background-color: var(--blue-dianne);
+  position: absolute;
+  height: calc(100vh - 90px);
+  width: 100vw;
+  top: 100%;
+  left: 0;
+  transition: transform .3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.nav.nav--active {
+  transform: translateX(0);
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  height: 100%;
+}
+
+.nav__item:not(last-child) {
+  margin-bottom: 20px;
+}
+
+.nav__link {
+  color: var(--pelorous);
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  transition: color .3s ease-in-out;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nav__link.nav__link--active {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+
+/* Styling that we want to happen on mouse hover and focus (eg. keyoard focus) 
+See here to read more on User Action Psuedo selectors https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes*/
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--blue-dianne);
+}
+
+/* The navigation has been built so far mobile first. 
+The media query below applies these styles to screens above 568px. */
+@media screen and (min-width: 568px) {
+  .nav {
+    background-color: unset;
+    position: unset;
+    height: auto;
+    width: auto;
+    top: auto;
+    left: auto;
+    transform: translateX(0);
+  }
+  .nav__list {
+    height: auto;
+    justify-content: unset;
+    flex-direction: row;
+  }
+  
+  .nav__item:not(last-child) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  
+  .nav__link {
+    padding: 0;
+  }
+  
+  .nav__link.nav__link--active {
+    color: var(--blue-dianne);
+  }
+
+}

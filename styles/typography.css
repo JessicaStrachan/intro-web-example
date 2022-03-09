@@ -1,0 +1,126 @@
+/* Heading styles */
+
+.heading {
+  color: var(--black);
+  font-family: var(--heading-font);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.heading--1 {
+  font-size: 50px;
+}
+
+.heading--2 {
+  font-size: 44px;
+}
+
+.heading--3 {
+  font-size: 34px;
+}
+
+.heading--4 {
+  font-size: 26px;
+}
+
+.heading--5 {
+  font-size: 20px;
+}
+
+
+/* Body copy styles */
+.copy {
+  color: var(--black);
+  font-family: var(--copy-font);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.copy--large {
+  font-size: 20px;
+}
+
+.copy--small {
+  font-size: 12px;
+}
+
+.copy--light {
+  font-weight: 300;
+}
+
+.copy--bold {
+  font-weight: 700;
+}
+
+.copy--italic {
+  font-style: italic;
+}
+
+/* Generic utility classes that can be applied to headings or copy */
+.center {
+  text-align: center;
+}
+
+.white-text {
+  color: var(--white);
+}
+
+/* Text link styling */
+.link {
+  font-size: inherit;
+  color: var(--blizzard-blue);
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+
+/* List Styling */
+
+.unordered-list,
+.ordered-list {
+  list-style: none;
+  padding: 0;
+}
+
+.unordered-list li {
+  padding-left: 27px;
+}
+
+.unordered-list li::before {
+  content: '';
+  background-color: var(--pelorous);
+  border-radius: 50%;
+  height: 8px;
+  min-width: 8px;
+  width: 8px;
+  margin-left: -27px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.ordered-list {
+  counter-reset: item;
+}
+
+.ordered-list li {
+  counter-increment: item;
+  margin-bottom: 5px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.ordered-list li::before {
+  border-radius: 100%;
+  content: counter(item) '.';
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  color: var(--pelorous);
+}
+

@@ -1,0 +1,79 @@
+.footer {
+  background-color: var(--blue-dianne);
+  border-top: 2px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1380px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* "CSS Element Element Selector"
+When selecting an element inside an element the following styles will only apply to the nav__list class when it's a child of the footer class 
+See https://www.w3schools.com/cssref/sel_element_element.asp */
+.footer .nav {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin-top: 20px;
+}
+.footer .nav__list {
+  flex-direction: column;
+}
+
+.footer .nav__link {
+  color: var(--white);
+  padding-bottom: 10px;
+  padding-top: 0;
+  font-size: 12px;
+}
+
+.footer .nav__link:hover,
+.footer .nav__link:focus {
+  text-decoration: underline;
+}
+
+/*  "CSS Not Selector"
+Apply the following CSS to the nav__item class but NOT the last child (the last nav__item) 
+See https://www.w3schools.com/cssref/sel_not.asp for more reading on the usage of :not()
+See https://www.w3schools.com/cssref/sel_last-child.asp for using last-child */
+.footer .nav__item:not(last-child) {
+  margin-right: 0; 
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 568px) {
+  .footer__container,
+  .footer .nav__list {
+    flex-direction: row;
+  }
+  
+  .footer .nav {
+    margin-top: 0;
+  }
+  
+  .footer .nav__item:not(:last-child) {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  
+  .footer .nav__link {
+    padding-bottom: 0;
+  }
+}

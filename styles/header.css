@@ -1,0 +1,102 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--william);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1380px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Mobile hamburger menu button */
+.header__hamburger-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  height: 25px;
+  position: absolute;
+  z-index: 2;
+  right: 40px;
+  top: 50%;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+}
+
+.header__hamburger-button::before,
+.header__hamburger-button::after,
+.header__hamburger-bar {
+  background-color: var(--blue-dianne);
+  display: block;
+  height: 4px;
+  width: 100%;
+  content: '';
+  transform: rotate(0);
+  position: absolute;
+}
+
+.header__hamburger-button::before {
+  top: 0
+}
+
+.header__hamburger-button::after {
+  bottom: 0;
+}
+
+.header__hamburger-bar {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Hamburger open menu state */
+.header__hamburger-button--active.header__hamburger-button::before,
+.header__hamburger-button--active.header__hamburger-button::after,
+.header__hamburger-button--active.header__hamburger-bar {
+  top: 50%;
+}
+
+.header__hamburger-button--active.header__hamburger-button::before {
+  transform: rotate(45deg) translateY(-50%);
+  right: 2px;
+  
+}
+
+.header__hamburger-button--active.header__hamburger-button::after {
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+.header__hamburger-button--active .header__hamburger-bar {
+  left: 50%;
+  width: 0;
+}
+
+/* The navigation has been built so far mobile first. 
+The media query below applies these styles to screens above 568px. */
+@media screen and (min-width: 568px) {
+  .header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .header__container {
+    flex-direction: row;
+  }
+  
+  .header__hamburger-button {
+    display: none;
+  }
+}

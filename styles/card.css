@@ -1,0 +1,17 @@
+.card {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgb(26 21 73 / 20%);
+  overflow: hidden;
+}
+
+.card__link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.card__content {
+  padding: 20px;
+}

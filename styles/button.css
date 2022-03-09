@@ -1,0 +1,32 @@
+.button {
+  background-color: var(--blue-dianne);
+  color: var(--white);
+  border-radius: 5px;
+  border: 2px solid var(--blue-dianne);
+  text-decoration: none;
+  display: inline-flex;
+  cursor: pointer;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  transition: background-color .3s ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--pelorous);
+}
+
+.button--ghost {
+  background-color: transparent;
+  color: var(--blue-dianne);
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.button--ghost:hover,
+.button--ghost:focus {
+  background-color: var(--blue-dianne);
+  color: var(--white);
+}

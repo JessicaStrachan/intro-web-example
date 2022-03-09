@@ -1,0 +1,69 @@
+/* Separating out CSS into modules avoids long files that are hard to maintain and difficult to navigate
+They must be imported at the top of this file.*/
+@import 'styles/header.css';
+@import 'styles/nav.css';
+@import 'styles/footer.css';
+@import 'styles/layout.css';
+@import 'styles/typography.css';
+@import 'styles/grid.css';
+@import 'styles/button.css';
+@import 'styles/card.css';
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Set global variables to be reused in all CSS files 
+See https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties for further reading on using variables.
+Colour names chosen using https://chir.ag/projects/name-that-color/ */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --pelorous : #39A7B8;
+  --william: #41666B;
+  --picton-blue: #49D5EB;
+  --blizzard-blue: #91E2EE;
+  --blue-dianne: #21616B;
+  --heading-font: 'Abril Fatface', cursive;
+  --copy-font: 'Open Sans', sans-serif;
+}
+
+/* Basic page style resets - you shouldn't need to change any of these below */
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+
+body {
+  font-family: var(--copy-font);
+  background-color: #f9f9f9;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.page {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}

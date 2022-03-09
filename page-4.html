@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Website Example</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Website Example" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+    
+    <!--  Import Fonts    -->
+    <!--   Google Fonts https://fonts.google.com/?category=Sans+Serif   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!--
+      This is the body of the page
+      Look at the elements and see how they appear in the rendered page on the right
+      Each element is defined using tags, with < and > indicating where each one opens and closes
+      There are elements for sections of the page, images, text, and more
+      The elements include attributes referenced in the CSS for the page style
+    -->
+    <div class="page">
+    <header class="header">
+      <div class="header__container">
+        <!--Link to home-->
+        <a href="/">
+          <!--Website logo-->
+          <img src="https://via.placeholder.com/170x50" alt="Website logo"/>
+        </a>
+        <!-- Hamburger button to open nav on mobile -->
+        <button class="header__hamburger-button" type="button" data-behaviour="hamburger-button" data-active-class="header__hamburger-button--active">
+          Menu
+          <span class="header__hamburger-bar"></span>
+        </button>
+        <nav class="nav" aria-label="Primary" data-behaviour="navigation" data-active-class="nav--active">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="/page-1.html">Page 1</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="/page-2.html">Page 2</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="/page-3.html">Page 3</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="/page-4.html">Page 4</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+    
+    <!--  The main element represents the dominant content of the page.
+  This is the part that will change per page -->
+    <main>
+      <section class="section">
+        <div class="container container--small">
+          <h1 class="heading heading--1 center">Page 4</h1>
+          <p class="copy center">Here is an example of some body copy</p>
+        </div>
+      </section>
+      
+      <section class="section">
+        <div class="container">
+          <div class="grid grid--2-col">
+            <div class="grid__item">
+              <img class="" src="https://via.placeholder.com/588x240" alt="Image description to be read by screen readers. All images should have this attribute" />
+            </div>
+            <div class="grid__item">
+              <h2 class="heading heading--3">This is an example of a grid being used to align content</h2>
+              <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a class="button" href="#">CTA button</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section section--dark">
+        <div class="container container--medium">
+          <div class="grid grid--3-col">
+            <div class="grid__item">
+              <h4 class="heading heading--4 white-text">
+                Text link
+              </h4>
+              <p class="copy white-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, <a class="link" href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="grid__item">
+              <h4 class="heading heading--4 white-text">
+                Unordered list
+              </h4>
+              <ul class="unordered-list">
+                <li class="copy white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.</li>
+                <li class="copy white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="copy white-text">Sapien pellentesque habitant morbi tristique.</li>
+              </ul>
+            </div>
+            <div class="grid__item">
+              <h4 class="heading heading--4 white-text">
+                Ordered list
+              </h4>
+              <ol class="ordered-list">
+                <li class="copy white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.</li>
+                <li class="copy white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="copy white-text">Sapien pellentesque habitant morbi tristique.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    </main>
+
+    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!--Link to home-->
+        <a href="/">
+          <!--Website logo-->
+          <img src="https://via.placeholder.com/170x50" alt="Website Logo" />
+        </a>
+        <nav class="nav" aria-label="Secondary">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Page 1</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Page 2</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Page 3</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Page 4</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>

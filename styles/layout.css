@@ -1,0 +1,54 @@
+/* Sections for each block */
+.section {
+  background-color: var(--white);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* The + selects a class that is an immediate sibling 
+See https://www.w3schools.com/cssref/sel_element_pluss.asp for further reading 
+and https://www.w3schools.com/cssref/css_selectors.asp for other CSS selectors */
+.section + .section:not(.section--dark) {
+/*  The padding-top removal is so that when two sections are next to each other the spacing doesn't double
+to create a gab of 240px. They will be consistent and all 60px gaps between content */
+  padding-top: 0;
+}
+
+.section.section--dark {
+  background-color: var(--blizzard-blue);
+}
+
+.section.section--dark + .section {
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 568px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+/* Containers to manage width of blocks */
+
+.container {
+  margin: 0 auto;
+  max-width: 1380px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container.container--small {
+  max-width: 910px;
+}
+
+@media screen and (min-width: 568px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .section.section--dark + .section {
+    padding-top: 120px;
+  }
+}
