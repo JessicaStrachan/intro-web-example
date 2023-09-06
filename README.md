@@ -1,3 +1,9 @@
+# Intro to Web starter code 
+
+This is the basis for the web projects for Intro To Web students. After they have wireframed and designed their 4-5 page site, they will use this code as a starting point. This is neccessary due to the whole module only being 1 semester long, this is one module of many and only have weekly lectures, and are coding for the first time. 
+
+Below is the Readme code from Glitch, which they used to fork from my project and begin theirs.
+
 # Hello website!
 
 This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
